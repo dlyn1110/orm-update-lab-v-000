@@ -57,7 +57,7 @@ class Student
     name =  row[1]
     grade = row[2]
     student = self.new(id, name, grade)
-    binding.pry
+    #binding.pry
    end
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
