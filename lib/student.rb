@@ -43,7 +43,7 @@ class Student
   end
 
    def update
-     sql = "UPDATE students SET name = ?, grade = ? WHERE is = ?"
+     sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
      DB[:conn].execute(sql, self.name, self.grade)
    end
   # Remember, you can access your database connection anywhere in this class
