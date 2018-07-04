@@ -49,7 +49,6 @@ class Student
 
    def self.create(name, grade)
      student = self.new(name, grade)
-     binding.pry
      student.save
    end
 
@@ -58,7 +57,7 @@ class Student
     name =  row[1]
     grade = row[2]
     self.new(id, name, grade)
-    #binding.pry
+    binding.pry
    end
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
