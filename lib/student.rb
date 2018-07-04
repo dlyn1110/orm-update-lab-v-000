@@ -49,7 +49,8 @@ class Student
 
    def self.create(name, grade)
      new_student = Student.new(name, grade)
-     student.save
+     new_student.save
+     new_student
    end
 
    def self.new_from_db(row)
