@@ -29,7 +29,7 @@ class Student
   end
 
   def save
-    if self.id 
+    if self.id
       self.update
     else
      sql = <<-SQL
@@ -38,6 +38,8 @@ class Student
    SQL
 
    DB[:conn].execute(sql, self.name, self.grade)
+   @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
+ end
  end
 
   # Remember, you can access your database connection anywhere in this class
